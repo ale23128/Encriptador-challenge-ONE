@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador ALURA</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- Fuentes botones -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">     
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1><img src="imagenes/alura-oracle.png" class="logo" alt="logo de alura"/></h1>
+
+        </header>
+
+        <main>
+            <!-- Seccion original -->
+            <section class="seccion-original">
+
+                <label for="texto-a-modificar" class="info-texto">¡Solo letras minúsculas, sin acentos ni caracteres especiales!</label>
+                <!--<input type="text" id="texto-a-encriptar" class="input-texto" placeholder="Ingrese su texto aquí" required> -->
+                <textarea cols="80" rows="7" class="texto-a-modificar" id="texto-a-modificar" oninput="validarMinusculas(this)" placeholder="Ingrese su texto aquí" required></textarea>
+
+                <div class="botones-principales">
+                    <input type="button" value="Encriptar" class="boton-encriptar" id="boton-encriptar">
+                    <input type="button" value="Desencriptar" class="boton-desencriptar" id="boton-desencriptar">
+                </div>
+
+            </section>
+
+            <!-- Seccion modificada-->
+            <section class="seccion-modificado">
+                
+                <div class="mensaje-estatico">
+                    <img src="imagenes/Muñeco.png" class="munieco" alt="imagen de un muñeco"/>
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                
+                <div class="area-modificado">
+                    <textarea cols="80" rows="9" class="texto-modificado" id="texto-modificado" readonly></textarea>
+                    <input type="button" value="copiar" class="boton-copiar" id="boton-copiar">
+                </div>
+               
+            </section>
+
+        </main>
+
+        <footer>
+            <img class="foto-footer" src="imagenes/alura challenge logo negro.png" alt="logo Alura Challenge"/>
+            <p class="copyright">&copy Copyright Alejandro Bruzzone - 2023</p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
